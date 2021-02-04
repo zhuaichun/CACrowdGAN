@@ -23,6 +23,11 @@ a novel cascaded attentional discriminator is proposed to synthesize attentional
 
 ![image](https://github.com/zhuaichun/CACrowdGAN/blob/main/Loss.png)
 
+By minimizing the MSE loss between the ground truth map
+and the reconstructed ground-truth density map while maximizing the MSE loss between the
+ground truth map and the reconstructed generated density map, the proposed discriminator is able to
+complete the task of distinguishment on the input.
+
 ## Dataset
 ShanghaiTech Dataset: [**Google Drive**](https://drive.google.com/open?id=16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI)
 
