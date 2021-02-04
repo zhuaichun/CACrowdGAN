@@ -14,7 +14,7 @@ CACrowdGAN: Cascaded Attentional Generative Adversarial Network for Crowd Counti
 The classical standard discriminators distinguish real data from generated data directly by a binary classifier. However,
 Energy Based GANs (EBGANs) were proposed as another class of GANs that aims to model the discriminator as an energy function. In EBGAN, the authors  proposed an auto-encoder discriminator with a reconstruction error.
 
-![image](https://github.com/zhuaichun/CACrowdGAN/blob/main/Loss.png)
+![image](https://github.com/zhuaichun/CACrowdGAN/blob/main/BEGAN.jpg)
 
 Inspired by the notion of EBGAN and BEGAN, we proposed the CACrowdGAN with an Hourglass-based discriminator.
 The CACrowdGAN contains two components: the attentional generator and the cascaded attentional discriminator. The attentional generator has an attention module and a density
