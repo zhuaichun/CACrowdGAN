@@ -11,7 +11,13 @@ CACrowdGAN: Cascaded Attentional Generative Adversarial Network for Crowd Counti
 - Image
 - h5py
 ## What is CACrowdGAN?
-It contains two components: the attentional generator and the cascaded attentional discriminator. The attentional generator has an attention module and a density
+The classical standard discriminators distinguish real data from generated data directly by a binary classifier. However,
+Energy Based GANs (EBGANs) were proposed as another class of GANs that aims to model the discriminator as an energy function. In EBGAN, the authors  proposed an auto-encoder discriminator with a reconstruction error.
+
+![image](https://github.com/zhuaichun/CACrowdGAN/blob/main/Loss.png)
+
+Inspired by the notion of EBGAN and BEGAN, we proposed the CACrowdGAN with an Hourglass-based discriminator.
+The CACrowdGAN contains two components: the attentional generator and the cascaded attentional discriminator. The attentional generator has an attention module and a density
 module. The attention module is developed to provide the attentional input of the density module, while the density module is designed to generate density maps. In addition,
 a novel cascaded attentional discriminator is proposed to synthesize attentional-driven fine-grained details at different crowd regions of the input image. The proposed discriminator module is built by an Hourglass-based structure (can be seen as an auto-encoder) which enables the discriminator to be used in a cascaded form and simultaneously the more precise per-pixel reconstruction loss. 
 
@@ -22,7 +28,7 @@ ShanghaiTech Dataset: [**Google Drive**](https://drive.google.com/open?id=16dhJn
 
 
 ##  Models
-We provide the best results of the two models on Shanghai A and Shanghai B respectively. The names are defined as **[model name] + \_model\_ + [dataset name] + .pth.tar**.
+We provide the best results of the two models (CSRNet and DSNet) on Shanghai A and Shanghai B respectively. The names are defined as **[model name] + \_model\_ + [dataset name] + .pth.tar**.
 
 
 ## Running
@@ -41,8 +47,8 @@ else:
     model = CSRNet()
 ```
 - val_data_path : The path of the dataset.
-- weight_path  : The path of the weight.
-- density_model  : The flag to choose the used model. If True, Dense model will be used to predict the results.
+- weight_path   : The path of the weight.
+- density_model : The flag to choose the used model. If True, Dense model will be used to predict the results.
 
 After setting the corresponding configuration, running the following commands could evaluate the model.
 ```
