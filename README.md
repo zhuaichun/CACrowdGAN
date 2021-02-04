@@ -14,7 +14,8 @@ CACrowdGAN: Cascaded Attentional Generative Adversarial Network for Crowd Counti
 It contains two components: the attentional generator and the cascaded attentional discriminator. The attentional generator has an attention module and a density
 module. The attention module is developed to provide the attentional input of the density module, while the density module is designed to generate density maps. In addition,
 a novel cascaded attentional discriminator is proposed to synthesize attentional-driven fine-grained details at different crowd regions of the input image. The proposed discriminator module is built by an Hourglass-based structure (can be seen as an auto-encoder) which enables the discriminator to be used in a cascaded form and simultaneously the more precise per-pixel reconstruction loss. 
-![image](https://github.com/xxx/xxx/blob/master/xxx/xxx.png)
+
+![image](https://github.com/zhuaichun/CACrowdGAN/blob/main/Loss.png)
 
 ## Dataset
 ShanghaiTech Dataset: [**Google Drive**](https://drive.google.com/open?id=16dhJn7k4FWVwByRsQAEpl9lwjuV03jVI)
