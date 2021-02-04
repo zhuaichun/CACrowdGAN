@@ -24,7 +24,7 @@ from matplotlib import cm as CM
 width = 1024
 height = 768
 
-val_data_path = '../part_A/test_data/images/'
+val_data_path = '../part_A/test_data/images/' 
 val_list = []
 for i in os.listdir(val_data_path):
     val_list.append(val_data_path + i)
